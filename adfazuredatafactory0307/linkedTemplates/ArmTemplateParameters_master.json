@@ -53,6 +53,18 @@
 		"LS_SqlServer_password": {
 			"value": ""
 		},
+		"LS_txt_accountKey": {
+			"value": ""
+		},
+		"LS_Blob_txt_connectionString": {
+			"value": ""
+		},
+		"LS_adls_csv_accountKey": {
+			"value": ""
+		},
+		"Ls_blob_cpy_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
 		},
@@ -109,6 +121,12 @@
 		},
 		"LS_SqlServer_properties_typeProperties_userName": {
 			"value": "anjanatriveda"
+		},
+		"LS_txt_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_adls_csv_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"value": ""
