@@ -1,0 +1,38 @@
+{
+	"name": "DelimitedText8",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Ls_blob_cpy",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Targetcsvfolder": {
+				"type": "string"
+			},
+			"targetcsvfilename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().targetcsvfilename",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().Targetcsvfolder",
+					"type": "Expression"
+				},
+				"container": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
