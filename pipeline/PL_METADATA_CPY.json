@@ -153,7 +153,7 @@
 										"value": "csv",
 										"activities": [
 											{
-												"name": "Copy data3",
+												"name": "Copy data csv",
 												"type": "Copy",
 												"dependsOn": [],
 												"policy": {
@@ -165,31 +165,71 @@
 												},
 												"userProperties": [],
 												"typeProperties": {
-													"enableStaging": false
-												}
+													"source": {
+														"type": "DelimitedTextSource",
+														"storeSettings": {
+															"type": "AzureBlobFSReadSettings",
+															"recursive": true,
+															"enablePartitionDiscovery": false
+														},
+														"formatSettings": {
+															"type": "DelimitedTextReadSettings"
+														}
+													},
+													"sink": {
+														"type": "DelimitedTextSink",
+														"storeSettings": {
+															"type": "AzureBlobStorageWriteSettings"
+														},
+														"formatSettings": {
+															"type": "DelimitedTextWriteSettings",
+															"quoteAllText": true,
+															"fileExtension": ".txt"
+														}
+													},
+													"enableStaging": false,
+													"translator": {
+														"type": "TabularTranslator",
+														"typeConversion": true,
+														"typeConversionSettings": {
+															"allowDataTruncation": true,
+															"treatBooleanAsNumber": false
+														}
+													}
+												},
+												"inputs": [
+													{
+														"referenceName": "DelimitedText7",
+														"type": "DatasetReference",
+														"parameters": {
+															"CSVfilename": {
+																"value": "@item().name",
+																"type": "Expression"
+															}
+														}
+													}
+												],
+												"outputs": [
+													{
+														"referenceName": "DelimitedText8",
+														"type": "DatasetReference",
+														"parameters": {
+															"Targetcsvfolder": {
+																"value": "@'CSV_Files'",
+																"type": "Expression"
+															},
+															"targetcsvfilename": {
+																"value": "@item().name",
+																"type": "Expression"
+															}
+														}
+													}
+												]
 											}
 										]
 									},
 									{
-										"value": "xls",
-										"activities": [
-											{
-												"name": "Copy data4",
-												"type": "Copy",
-												"dependsOn": [],
-												"policy": {
-													"timeout": "0.12:00:00",
-													"retry": 0,
-													"retryIntervalInSeconds": 30,
-													"secureOutput": false,
-													"secureInput": false
-												},
-												"userProperties": [],
-												"typeProperties": {
-													"enableStaging": false
-												}
-											}
-										]
+										"value": ""
 									}
 								]
 							}
