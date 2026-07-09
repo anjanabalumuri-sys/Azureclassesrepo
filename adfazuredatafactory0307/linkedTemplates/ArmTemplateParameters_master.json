@@ -1,0 +1,120 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfazuredatafactory0307"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_GEN2_accountKey": {
+			"value": ""
+		},
+		"LS_ADLS_OUTPUT_accountKey": {
+			"value": ""
+		},
+		"LS_AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"LS_AzureDataLakeStorage_blob_accountKey": {
+			"value": ""
+		},
+		"LS_BLOB_ADLS_connectionString": {
+			"value": ""
+		},
+		"LS_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_CSVS_ADLS_OUTPUT_accountKey": {
+			"value": ""
+		},
+		"LS_CSVS_BLOBINPUT_connectionString": {
+			"value": ""
+		},
+		"LS_CSV_ADLS_connectionString": {
+			"value": ""
+		},
+		"LS_LOOKUP_password": {
+			"value": ""
+		},
+		"LS_SQL_LIG_password": {
+			"value": ""
+		},
+		"LS_SQL_SP_password": {
+			"value": ""
+		},
+		"LS_SqlServer_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_ADLS_GEN2_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_ADLS_OUTPUT_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_AzureDataLakeStorage_blob_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_CSV_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_CSVS_ADLS_OUTPUT_properties_typeProperties_url": {
+			"value": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_LOOKUP_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_LOOKUP_properties_typeProperties_database": {
+			"value": "Visionboardmigration"
+		},
+		"LS_LOOKUP_properties_typeProperties_userName": {
+			"value": "anjanatriveda"
+		},
+		"LS_SQL_LIG_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQL_LIG_properties_typeProperties_database": {
+			"value": "Visionboardmigration"
+		},
+		"LS_SQL_LIG_properties_typeProperties_userName": {
+			"value": "anjanatriveda"
+		},
+		"LS_SQL_SP_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQL_SP_properties_typeProperties_database": {
+			"value": "Visionboardmigration"
+		},
+		"LS_SQL_SP_properties_typeProperties_userName": {
+			"value": "anjanatriveda"
+		},
+		"LS_SqlServer_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SqlServer_properties_typeProperties_database": {
+			"value": "AdventureWorks2025"
+		},
+		"LS_SqlServer_properties_typeProperties_userName": {
+			"value": "anjanatriveda"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

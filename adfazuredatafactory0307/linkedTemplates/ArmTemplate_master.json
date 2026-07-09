@@ -1,0 +1,307 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfazuredatafactory0307"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"LS_ADLS_GEN2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_GEN2'"
+		},
+		"LS_ADLS_OUTPUT_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_ADLS_OUTPUT'"
+		},
+		"LS_AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_AzureBlobStorage1'"
+		},
+		"LS_AzureDataLakeStorage_blob_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_AzureDataLakeStorage_blob'"
+		},
+		"LS_BLOB_ADLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_BLOB_ADLS'"
+		},
+		"LS_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV'"
+		},
+		"LS_CSVS_ADLS_OUTPUT_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSVS_ADLS_OUTPUT'"
+		},
+		"LS_CSVS_BLOBINPUT_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_CSVS_BLOBINPUT'"
+		},
+		"LS_CSV_ADLS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_CSV_ADLS'"
+		},
+		"LS_LOOKUP_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_LOOKUP'"
+		},
+		"LS_SQL_LIG_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQL_LIG'"
+		},
+		"LS_SQL_SP_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQL_SP'"
+		},
+		"LS_SqlServer_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SqlServer'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_ADLS_GEN2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_ADLS_OUTPUT_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_AzureDataLakeStorage_blob_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_CSVS_ADLS_OUTPUT_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2storageacct0307.dfs.core.windows.net/"
+		},
+		"LS_LOOKUP_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_LOOKUP_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Visionboardmigration"
+		},
+		"LS_LOOKUP_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "anjanatriveda"
+		},
+		"LS_SQL_LIG_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQL_LIG_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Visionboardmigration"
+		},
+		"LS_SQL_LIG_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "anjanatriveda"
+		},
+		"LS_SQL_SP_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQL_SP_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Visionboardmigration"
+		},
+		"LS_SQL_SP_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "anjanatriveda"
+		},
+		"LS_SqlServer_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_SqlServer_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2025"
+		},
+		"LS_SqlServer_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "anjanatriveda"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfazuredatafactory0307_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"LS_ADLS_GEN2_accountKey": {
+						"value": "[parameters('LS_ADLS_GEN2_accountKey')]"
+					},
+					"LS_ADLS_OUTPUT_accountKey": {
+						"value": "[parameters('LS_ADLS_OUTPUT_accountKey')]"
+					},
+					"LS_AzureBlobStorage1_connectionString": {
+						"value": "[parameters('LS_AzureBlobStorage1_connectionString')]"
+					},
+					"LS_AzureDataLakeStorage_blob_accountKey": {
+						"value": "[parameters('LS_AzureDataLakeStorage_blob_accountKey')]"
+					},
+					"LS_BLOB_ADLS_connectionString": {
+						"value": "[parameters('LS_BLOB_ADLS_connectionString')]"
+					},
+					"LS_CSV_accountKey": {
+						"value": "[parameters('LS_CSV_accountKey')]"
+					},
+					"LS_CSVS_ADLS_OUTPUT_accountKey": {
+						"value": "[parameters('LS_CSVS_ADLS_OUTPUT_accountKey')]"
+					},
+					"LS_CSVS_BLOBINPUT_connectionString": {
+						"value": "[parameters('LS_CSVS_BLOBINPUT_connectionString')]"
+					},
+					"LS_CSV_ADLS_connectionString": {
+						"value": "[parameters('LS_CSV_ADLS_connectionString')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"LS_ADLS_GEN2_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_GEN2_properties_typeProperties_url')]"
+					},
+					"LS_ADLS_OUTPUT_properties_typeProperties_url": {
+						"value": "[parameters('LS_ADLS_OUTPUT_properties_typeProperties_url')]"
+					},
+					"LS_AzureDataLakeStorage_blob_properties_typeProperties_url": {
+						"value": "[parameters('LS_AzureDataLakeStorage_blob_properties_typeProperties_url')]"
+					},
+					"LS_CSV_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_properties_typeProperties_url')]"
+					},
+					"LS_CSVS_ADLS_OUTPUT_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSVS_ADLS_OUTPUT_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfazuredatafactory0307_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_LOOKUP_password": {
+						"value": "[parameters('LS_LOOKUP_password')]"
+					},
+					"LS_SQL_LIG_password": {
+						"value": "[parameters('LS_SQL_LIG_password')]"
+					},
+					"LS_SQL_SP_password": {
+						"value": "[parameters('LS_SQL_SP_password')]"
+					},
+					"LS_SqlServer_password": {
+						"value": "[parameters('LS_SqlServer_password')]"
+					},
+					"LS_LOOKUP_properties_typeProperties_server": {
+						"value": "[parameters('LS_LOOKUP_properties_typeProperties_server')]"
+					},
+					"LS_LOOKUP_properties_typeProperties_database": {
+						"value": "[parameters('LS_LOOKUP_properties_typeProperties_database')]"
+					},
+					"LS_LOOKUP_properties_typeProperties_userName": {
+						"value": "[parameters('LS_LOOKUP_properties_typeProperties_userName')]"
+					},
+					"LS_SQL_LIG_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQL_LIG_properties_typeProperties_server')]"
+					},
+					"LS_SQL_LIG_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQL_LIG_properties_typeProperties_database')]"
+					},
+					"LS_SQL_LIG_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQL_LIG_properties_typeProperties_userName')]"
+					},
+					"LS_SQL_SP_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQL_SP_properties_typeProperties_server')]"
+					},
+					"LS_SQL_SP_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQL_SP_properties_typeProperties_database')]"
+					},
+					"LS_SQL_SP_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQL_SP_properties_typeProperties_userName')]"
+					},
+					"LS_SqlServer_properties_typeProperties_server": {
+						"value": "[parameters('LS_SqlServer_properties_typeProperties_server')]"
+					},
+					"LS_SqlServer_properties_typeProperties_database": {
+						"value": "[parameters('LS_SqlServer_properties_typeProperties_database')]"
+					},
+					"LS_SqlServer_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SqlServer_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfazuredatafactory0307_ArmTemplate_0')]"
+			]
+		}
+	]
+}
