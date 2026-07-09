@@ -1,0 +1,33 @@
+{
+	"name": "Binary2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob_txt",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Targetfilename": {
+				"type": "string"
+			},
+			"Targetfolder": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().Targetfilename",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().Targetfolder",
+					"type": "Expression"
+				},
+				"container": "output"
+			}
+		}
+	}
+}
