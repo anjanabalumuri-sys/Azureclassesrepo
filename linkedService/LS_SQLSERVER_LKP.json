@@ -8,10 +8,10 @@
 			"server": "localhost\\SQLEXPRESS",
 			"database": "RetailDW_Dev",
 			"encrypt": "mandatory",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "SQL",
 			"userName": "anjanatriveda",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhMmM4NGFmOC1kMmI3LTRhYTMtYWZlOC1mYTRmZTA1ZmQ0YjEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJiZmE5MWQwYy1lMzBjLTQ4NjktYWIzZC1kYWNhMDgzNzc2MGQiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
