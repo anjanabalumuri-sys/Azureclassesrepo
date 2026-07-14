@@ -27,7 +27,8 @@
 					"dataset": {
 						"referenceName": "DS_SQLSERVER_LKP",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{

@@ -41,7 +41,7 @@
 				}
 			},
 			{
-				"name": "I_NEW_RECORD_EXISTS",
+				"name": "IF_NEW_RECORD_EXISTS",
 				"type": "IfCondition",
 				"dependsOn": [
 					{
